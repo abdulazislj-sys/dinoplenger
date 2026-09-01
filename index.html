@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#f7f7f7">
+  <title>Dino Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Dino Runner">
+    <div id="hud">
+      <div id="best">BEST 00000</div>
+      <div id="score">00000</div>
+    </div>
+
+    <div id="dino" aria-label="Dino">
+      <div class="dino-head"><span class="eye"></span></div>
+      <div class="dino-body"></div>
+      <div class="leg leg-left"></div>
+      <div class="leg leg-right"></div>
+      <div class="tail"></div>
+    </div>
+
+    <div id="ground"></div>
+
+    <div id="startScreen" class="overlay">
+      <div class="logo">🦖</div>
+      <h1>DINO RUNNER</h1>
+      <p>Tap layar untuk mulai</p>
+      <small>Tap / Space / ↑ untuk lompat</small>
+    </div>
+
+    <div id="lovePopup" class="love-popup hidden">
+      <div class="love-card">
+        <div class="love-heart">❤️</div>
+        <h1>I LOVE U ALIN</h1>
+        <p>Dino berhasil mencapai skor 26 dan sekarang lagi berjoget! 🦖💃</p>
+        <button id="continueButton">LANJUT MAIN</button>
+      </div>
+    </div>
+
+    <div id="gameOverScreen" class="overlay hidden">
+      <div class="logo">💥</div>
+      <h1>GAME OVER</h1>
+      <p id="finalScore">Skor: 0</p>
+      <button id="restartButton">MAIN LAGI</button>
+      <small>atau tap layar</small>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
 </html>
